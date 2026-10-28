@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>JTV Go Bridge Test</h2>
+  <p id="result">Checking bridge...</p>
+
+  <script>
+    const exposed =
+      typeof window.Android?.onSubmit === "function";
+
+    document.getElementById("result").textContent =
+      exposed
+        ? "EXPOSED: Native bridge accessible"
+        : "NOT DETECTED: Native bridge unavailable";
+  </script>
+</body>
+</html>
